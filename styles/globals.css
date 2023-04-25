@@ -4,11 +4,26 @@
 
 body {
   /* font설정 */
-  /* font-family: "main-font"; */
+  font-family: "main-font";
 }
 
 /* 클래스명 설정 */
 @layer components {
+  .header-nav {
+    @apply flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto;
+  }
+
+  .header-nav div {
+    @apply cursor-pointer mr-5 text-base hover:text-blue-700;
+  }
+  .self-introduce-title {
+    @apply font-bold pb-1 text-black;
+  }
+
+  .self-introduce-content {
+    @apply ml-3 mb-2;
+  }
+
   .main-introduce-title {
     @apply text-blue-800 text-xl font-medium mb-3;
   }

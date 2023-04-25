@@ -11,9 +11,10 @@ import TackuTable from "@/components/Projects/TackuTable";
 import HospitalProject from "@/components/Projects/HospitalProject";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import TopButton from "@/components/Button/TopButton";
 
-export default function Home({ projects }) {
+export default function Home({ projects }: any) {
   useEffect(() => {
     AOS.init({
       offset: 120, // offset (in px) from the original trigger point
@@ -22,6 +23,11 @@ export default function Home({ projects }) {
       mirror: true,
     });
   }, []);
+
+  const introduceRef = useRef(null);
+  const skillRef = useRef(null);
+  const projectRef = useRef(null);
+
   return (
     <>
       <Head>
@@ -31,40 +37,42 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Header />
+        <Header refs={[introduceRef, skillRef, projectRef]} />
         {/* 자기소개 */}
         <SelfIntroduce />
-        <MainIntroduce />
-
+        <div ref={introduceRef}>
+          <MainIntroduce />
+        </div>
         {/* 핵심경험 */}
         <CoreExperience />
-
         {/* 스킬 */}
-        <MainSkills />
-        <EtcSkills />
-
+        <div ref={skillRef}>
+          <MainSkills />
+          <EtcSkills />
+        </div>
         <hr />
-
         {/* 프로젝트  */}
-
-        <TackuTable />
-        <HospitalProject />
-
+        <div ref={projectRef}>
+          <TackuTable />
+          <HospitalProject />
+        </div>
         {/* 기타 프로젝트 */}
         <div className="flex flex-col text-center w-full mb-10 mt-[5%]">
           <h2 className="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
             ETC
           </h2>
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-            PROJECT
+            기타 프로젝트
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-4">
-          {projects.results.map((project) => (
-            <Projects key={project.id} data={project} />
+        <div className="flex lg:flex-row flex-col items-center justify-center ">
+          {projects.results.map((project: any) => (
+            <div key={project.id}>
+              <Projects key={project.id} data={project} />
+            </div>
           ))}
         </div>
-
+        <TopButton />
         <Footer />
       </div>
     </>
@@ -83,7 +91,7 @@ export async function getStaticProps() {
     },
 
     body: JSON.stringify({
-      sorts: [{ property: "이름", direction: "ascending" }],
+      sorts: [{ property: "projectName", direction: "ascending" }],
       page_size: 100,
     }),
   };
@@ -94,13 +102,6 @@ export async function getStaticProps() {
   );
 
   const projects = await res.json();
-  console.log("projects", projects);
-
-  const projectNames = projects.results.map(
-    (project) => project.properties.이름.title[0].plain_text
-  );
-
-  console.log("projectNames : ", projectNames);
 
   return {
     props: { projects },

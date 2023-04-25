@@ -68,7 +68,7 @@ const HospitalProject = () => {
 
       <div className="border border-gray-200 w-full mt-5"></div>
       {/* 핵심 역할  */}
-      <div className="mx-auto">
+      <div data-aos="zoom-in" data-aos-duration="1000" className="mx-auto">
         <section className="text-gray-600 body-font overflow-hidden">
           <div className="container px-5 py-10 mx-auto">
             <div className="flex flex-wrap -m-12">
@@ -82,16 +82,20 @@ const HospitalProject = () => {
                 <div className="leading-relaxed mb-8">
                   <ol>
                     <li>
-                      - NEXT.js의 이미지 컴포넌트를 사용하여 페이지 로딩 속도를
-                      기존 홈페이지 초기 랜더링 속도를 1.8s → 0.3s 으로 개선
+                      - <span className="font-bold">이미지 최적화</span> 작업 :
+                      페이지 초기 랜더링 속도
+                      <span className="font-bold text-blue-800">
+                        &nbsp; 1.8s &#8594; 0.3s &nbsp;
+                      </span>
+                      개선
                     </li>
                     <li>
-                      - 검색 노출되는 것이 유리한 홈페이지의 특징을 고려하여
-                      NEXT.js를 채택하여 SEO에 유리한 SSR 방식을 사용
+                      - 검색 노출되는 것이 유리한 홈페이지의 특징 고려하여
+                      NEXT.js 채택 &#8594; SEO에 유리한 SSR 방식 선택
                     </li>
                     <li>
-                      - 모바일 반응형 UI/UX 작업을 통해 모바일 기기에서
-                      웹사이트를 이용하는 사용자에게 더 나은 사용자 경험을 제공
+                      - 모바일 반응형 UI/UX 작업을 통해 모바일 기기에서 웹사이트
+                      이용하는 사용자에게 더 나은 사용자 경험 제공
                     </li>
                   </ol>
                 </div>

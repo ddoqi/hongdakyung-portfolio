@@ -6,10 +6,10 @@ const TackuTable = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col text-center w-full mb-5 mt-[5%]">
-        <h2 className="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
+        <h2 className="text-xs text-gray-500 tracking-widest font-medium title-font mb-1">
           MAIN PROJECT
         </h2>
-        <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-brand100">
           PROJECT
         </h1>
       </div>
@@ -77,7 +77,7 @@ const TackuTable = () => {
 
       <div className="border border-gray-200 w-full mt-5"></div>
       {/* 핵심 역할  */}
-      <div className="mx-auto">
+      <div data-aos="zoom-in" data-aos-duration="1000" className="mx-auto">
         <section className="text-gray-600 body-font overflow-hidden">
           <div className="container px-5 py-10 mx-auto">
             <div className="flex flex-wrap -m-12">
@@ -90,30 +90,35 @@ const TackuTable = () => {
                 </h2>
                 <div className="leading-relaxed mb-8">
                   <ol>
-                    <li>- 팀장 역할을 맡아 팀 리딩 & 디자이너 소통 담당</li>
+                    <li>- 팀 리딩(팀장) & 디자이너 담당 소통</li>
+
                     <li>
-                      - 간트 차트 도입하여 개발 프로세스 체계화하여 팀 생산성
-                      향상 기여
-                    </li>
-                    <li>
-                      - Recoil 사용하여 데이터를 전역 상태로 관리하여 불필요한
-                      렌더링을 줄이고 컴포넌트 랜더링 속도를 86ms 에서 60ms로
+                      - 데이터 전역 상태관리 : 불필요한 랜더링 개선 &#8594;
+                      컴포넌트 랜더링 속도
+                      <span className="text-blue-800 font-bold">
+                        86ms에서 60ms
+                      </span>
                       개선
                     </li>
                     <li>
-                      - 디바운싱 적용 : setTimeout 함수를 사용하여 0.5초(500ms)
-                      이후에 검색어를 업데이트시켜 서버에 부담을 줄이고, 사용자
-                      경험 향상
-                      <span className="font-bold"></span>
+                      -
+                      <span className="text-blue-800 font-bold">
+                        디바운싱 적용
+                      </span>{" "}
+                      : setTimeout을 사용 0.5초(500ms) 이후 검색어 업데이트
+                      &#8594; 서버 부담 감소, 사용자 경험 향상
                     </li>
                     <li>
-                      - useQuery의 자동 캐싱기능 활용하여 동일한 검색어에 대한
-                      불필요한 API 반복 호출을 줄여 성능 최적화
+                      - useQuery 자동 <span>캐싱 기능</span> 활용 : 동일한
+                      검색어에 대한 API 호출 반복 제거 &#8594; 불필요한 네트워크
+                      요청 감소,
+                      <span className="text-blue-800 font-bold">
+                        성능 최적화
+                      </span>
                     </li>
                     <li>
-                      - 실시간 유저 닉네임, 프로필 사진을 조회하는 로직을
-                      커스텀훅으로 작성하여 중복되는 코드를 제거하여 재사용성과
-                      유지보수성을 높임
+                      -<span className="font-bold">&nbsp;커스텀훅 작성</span> :
+                      중복되는 코드 제거 &#8594; 재사용성, 유지보수성 높임
                     </li>
                     <li>
                       - Tailwind를 사용하여 일관된 디자인 시스템을 구축하여

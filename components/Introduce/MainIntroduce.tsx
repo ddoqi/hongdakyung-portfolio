@@ -5,10 +5,14 @@ import mainPhoto from "../../public/images/mainPhoto.jpeg";
 const MainIntroduce = () => {
   return (
     <div>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font mt-[10%]">
         <div className="px-5 py-5 mx-auto lg:flex items-center justify-center">
           {/* 이미지 영역  */}
-          <div className="lg:w-[1/2] mb-10 lg:mb-0 rounded-lg">
+          <div
+            data-aos="flip-left"
+            data-aos-duration="2000"
+            className="lg:w-[1/2] mb-10 lg:mb-0 rounded-lg"
+          >
             <Image
               className="rounded-lg w-[95%] "
               src={mainPhoto}
@@ -20,6 +24,10 @@ const MainIntroduce = () => {
 
           {/* 자기소개 영역 */}
           <div className="flex flex-col flex-wrap -mb-10 lg:w-1/2 lg:text-left text-center ml-3">
+            <h3 className="mb-6 text-2xl text-black">
+              Hello! I&#39;m Da Kyung 👋🏼
+              <br />
+            </h3>
             {/* contact */}
             <div
               data-aos="fade-left"
@@ -106,11 +114,13 @@ const MainIntroduce = () => {
 
                 <div className="pl-5">
                   <ol className="text-base">
-                    <li className="font-bold">정보처리산업기사(2022)</li>
-                    <li className="font-bold">
+                    <li className="font-bold text-black">
+                      정보처리산업기사(2022)
+                    </li>
+                    <li className="font-bold text-black">
                       자바(JAVA)기반 응용 SW 전문가 양성 과정 수료
                     </li>
-                    <li className="font-bold">
+                    <li className="font-bold text-black">
                       리액트(React) 프론트엔드 엔지니어 과정 수료
                     </li>
 

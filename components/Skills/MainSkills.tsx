@@ -36,16 +36,19 @@ const MainSkills = () => {
                       <path d="m324,370c10,17 24,29 47,29 20,0 33,-10 33,-24 0,-16 -13,-22 -35,-32l-12,-5c-35,-15 -58,-33 -58,-72 0,-36 27,-64 70,-64 31,0 53,11 68,39l-37,24c-8,-15 -17,-21 -31,-21 -14,0 -23,9 -23,21 0,14 9,20 30,29l12,5c41,18 64,35 64,76 0,43 -34,67 -80,67 -45,0 -74,-21 -88,-49zm-170,4c8,13 14,25 31,25 16,0 26,-6 26,-30V203h48v164c0,50 -29,72 -72,72 -39,0 -61,-20 -72,-44z" />
                     </svg>
                   </div>
-                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    className="flex-grow sm:pl-6 mt-6 sm:mt-0"
+                  >
                     <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
                       JavaScript
                     </h2>
                     <p className="leading-relaxed">
-                      - 바닐라 자바스크립트를 사용하여 비동기 프로그래밍을
-                      구현한 프로젝트 경험이 있습니다. <br />- DOM 조작, 이벤트
-                      처리를 구현할 수 있습니다. <br />- 모던 자바스크립트
-                      문법과 ES6+의 새로운 기능을 활용하여 코드의 가독성을 높일
-                      수 있습니다.
+                      - 바닐라 자바스크립트를 사용한 비동기 프로그래밍 구현 경험
+                      <br />- DOM 조작, 이벤트 처리 구현
+                      <br />- 모던 자바스크립트 문법 및 ES6+ 새로운 기능
+                      활용하여 코드 가독성 개선
                     </p>
                   </div>
                 </div>
@@ -70,21 +73,25 @@ const MainSkills = () => {
                       </g>
                     </svg>
                   </div>
-                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    className="flex-grow sm:pl-6 mt-6 sm:mt-0"
+                  >
                     <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
                       React
                     </h2>
                     <p className="leading-relaxed">
-                      - React를 사용하여 6개의 웹 애플리케이션을 개발하였습니다.{" "}
+                      - React 사용, 웹 애플리케이션을 개발
                       <br />
-                      - React에서 성능 최적화를 위한 useMemo, useCallback 등을
-                      이해하고 이를 적용할 수 있습니다.
+                      - 성능 최적화를 위한 useMemo, useCallback 등을 이해, 적용
                       <br />
-                      - Redux, Recoil 상태 관리 라이브러리를 사용하여 상태
-                      관리를 할 수 있습니다. <br />
-                      - JSX 문법을 이해하고, 이를 활용하여 가독성 좋은 코드를
-                      작성합니다. <br />- 라이프 사이클을 이해하며 컴포넌트가
-                      렌더링, 업데이트 될 때 특정한 작업을 수행시킬 수 있습니다.
+                      - React-query , Redux , Recoil 라이브러리 사용하여 상태
+                      관리
+                      <br />
+                      - JSX 문법 이해, 이를 활용하여 클린코드 작성 <br />- Life
+                      Cycle을 이해하며 컴포넌트가 렌더링, 업데이트 될 때 특정한
+                      작업 수행
                     </p>
                   </div>
                 </div>
@@ -114,17 +121,19 @@ const MainSkills = () => {
                       />
                     </svg>
                   </div>
-                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    className="flex-grow sm:pl-6 mt-6 sm:mt-0"
+                  >
                     <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
                       NEXT.js
                     </h2>
                     <p className="leading-relaxed">
-                      - React , NEXT.js 를 사용한 실사용자 200 여명의 서비스를
-                      개발하였습니다.
-                      <br /> - NEXT.js를 사용하여 홈페이지 초기 랜더링 속도를
-                      1.8s 에서 0.3s 으로 개선한 경험이 있습니다.
-                      <br /> - SSR , CSR, ISR ,SSG 의 장단점을 이해하고, 상황에
-                      맞는 방식을 선택하여 적용할 수 있습니다.
+                      - NEXT.js 이미지 컴포넌트 사용, 홈페이지 초기 랜더링 속도
+                      1.8s &#8594;0.3s 개선 경험
+                      <br /> - SSR , CSR, ISR ,SSG 의 장단점 이해, 상황에 맞는
+                      방식을 선택하여 적용
                     </p>
                   </div>
                 </div>
@@ -149,17 +158,20 @@ const MainSkills = () => {
                       />
                     </svg>
                   </div>
-                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    className="flex-grow sm:pl-6 mt-6 sm:mt-0"
+                  >
                     <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
                       React-query , Redux , Recoil
                     </h2>
                     <p className="leading-relaxed">
-                      - 상태관리 라이브러리를 React, NEXT.js에 활용하여
-                      프로젝트에 적용한 경험이 있습니다. <br />- 애플리케이션의
-                      상태를 중앙 집중적으로 관리하고, 확장성과 유지보수성을
-                      높일 수 있습니다.
-                      <br />- React-query의 캐싱 기능을 통해 서버에 불필요한
-                      요청을 줄인 경험이 있습니다.
+                      - 상태관리 라이브러리를 React, NEXT.js에 활용 <br />-
+                      애플리케이션의 상태를 중앙 집중적 관리, 확장성과
+                      유지보수성 높임
+                      <br />- React-query 캐싱 기능을 통해 불필요한 서버 요청
+                      개선
                     </p>
                   </div>
                 </div>
