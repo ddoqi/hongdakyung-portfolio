@@ -4,8 +4,15 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link
+          rel="preload"
+          href="/fonts/mainfont.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
         <meta property="og:type" content="website" />
-        {/* <meta property="og:url" content="https://hdk-portfolio.vercel.app/" /> */}
+        <meta property="og:url" content="https://hongdakyung.vercel.app/" />
         <meta property="og:title" content="홍다경 포트폴리오" />
         <meta property="og:image" content="../public/images/mainPhoto.jpeg" />
         <meta
