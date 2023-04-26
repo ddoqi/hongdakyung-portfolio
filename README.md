@@ -1,13 +1,16 @@
-# 홍다경 포트폴리오
+# HDK PORTFOLIO PROJECT !
 
 ## 👩🏻‍💻 프로젝트 소개
 
-- 홍다경 포트폴리오 웹사이트
+- 홍다경 포트폴리오
 - 1인 프로젝트
+- 모바일 반응형 웹 프로젝트입니다.
 
-<br/>
+<hr/>
 
-> PREVIEW (데스크탑)
+## 👀 PREVIEW (데스크탑)
+
+<hr/>
 
 <img
  width="500px"
@@ -15,7 +18,11 @@
 
 <img width="500px" src="public/images/screen1.png" alt="프로젝트 소개 이미지"/> >
 
-> PREVIEW(모바일)
+<hr/>
+
+## 👀 PREVIEW (모바일)
+
+<hr/>
 
 <p align="center">
   <img width="200px" src="public/images/mobileRecord.gif" alt="모바일 스크린 녹화"/>
@@ -26,20 +33,21 @@
 <br/>
 <hr/>
 
-## 🛠 SKILLS
-
-Next.js, TypeScript, notion-client, Tailwind, AOS, Vercel
-
-<br/>
-<hr/>
-
 ## 🖇 LINK
 
 [포트폴리오 바로가기](https://hongdakyung.vercel.app/)
 
+<hr/>
+
+## 🛠 SKILLS
+
+ㄴ Next.js, TypeScript, notion-client, Tailwind, AOS, Vercel
+
+<hr/>
+
 ## 👩🏻‍💻 작업 기간
 
-2023.04.23 - 2022.04.26
+ㄴ 2023.04.23 - 2022.04.26
 
 <hr/>
 
