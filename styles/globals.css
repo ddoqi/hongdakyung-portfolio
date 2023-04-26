@@ -9,6 +9,15 @@ body {
 
 /* 클래스명 설정 */
 @layer components {
+  /* 16:9 비율 */
+  .aspect-w-16 {
+    width: 100%;
+  }
+  .aspect-h-9 {
+    height: 0;
+    padding-bottom: 48.25%; /* 16:9 비율의 높이를 유지하기 위한 값 */
+  }
+
   .header-nav {
     @apply flex lg:w-2/5 flex-wrap sm:space-x-8 space-x-3 items-center text-base md:ml-auto;
   }
@@ -41,7 +50,7 @@ body {
   }
 
   .main-skills-container {
-    @apply flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto;
+    @apply flex relative pt-10 pb-20 sm:items-center sm:aspect-w-16 sm:aspect-h-9 mx-auto;
   }
 
   .main-skills-icons-container {
