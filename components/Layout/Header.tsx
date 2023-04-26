@@ -1,14 +1,11 @@
 import React from "react";
 import { RefObject } from "react";
 
-interface HeaderProps {
-  refs: {
-    [key: string]: RefObject<HTMLElement>;
-  };
-}
+type HeaderProps = {
+  refs: RefObject<HTMLElement>[];
+};
 
 const Header = ({ refs }: HeaderProps) => {
-  console.log(refs);
   const onClickRef = (indexNum: number) => {
     refs[`${indexNum}`].current?.scrollIntoView({ behavior: "smooth" });
   };
