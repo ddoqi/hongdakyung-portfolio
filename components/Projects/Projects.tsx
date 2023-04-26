@@ -1,31 +1,42 @@
+import {
+  NotionProjectDataType,
+  ProjectDataType,
+  ProjectsProps,
+} from "@/types/types";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-const Projects = ({ data }: any) => {
+type Skill = {
+  id: string;
+  name: string;
+};
+
+type Task = {
+  id: string;
+  name: string;
+};
+
+const Projects = ({ data }: ProjectsProps) => {
   const projectName = data.properties.projectName.title[0].plain_text;
-  // 배열임
   const skills = data.properties.skills.multi_select;
   const description = data.properties.description.rich_text[0].plain_text;
   const myTask = data.properties.Task.multi_select;
   const imgSrc = data.cover.file?.url;
   const projectID = data.properties.projectId.rich_text[0].plain_text;
 
-  // useEffect(() => {
-  //   console.log("data", data.properties.projectId.rich_text[0].plain_text);
-  // }, []);
-
   const connectURL = (projectID: string | number) => {
-    console.log(projectID);
-    if (projectID == 1) {
-      window.open("https://easygpt.ai/");
-    }
-
-    if (projectID == 2) {
-      window.open("https://github.com/Jeremy-Kr/there-are");
-    }
-
-    if (projectID == 3) {
-      window.open("https://github.com/ddoqi/saesuda-front");
+    switch (projectID) {
+      case 1:
+        window.open("https://easygpt.ai/");
+        break;
+      case 2:
+        window.open("https://github.com/Jeremy-Kr/there-are");
+        break;
+      case 3:
+        window.open("https://github.com/ddoqi/saesuda-front");
+        break;
+      default:
+        break;
     }
   };
   return (
@@ -56,7 +67,7 @@ const Projects = ({ data }: any) => {
                     🛠 SKILLS
                   </h3>
                   <div className="lg:h-[60px]">
-                    {skills.map((item: any, index: any) => {
+                    {skills.map((item: Skill, index: number) => {
                       return (
                         <div
                           key={index}
@@ -71,10 +82,9 @@ const Projects = ({ data }: any) => {
                   <h3 className="text-md mt-1 text-gray-800 font-bold">
                     ✔️ TASK
                   </h3>
-                  {myTask.map((item: any, index: any) => {
+                  {myTask.map((item: Task, index: number) => {
                     return (
                       <div key={index} className="text-md">
-                        {" "}
                         - {item.name}
                       </div>
                     );

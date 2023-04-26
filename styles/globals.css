@@ -10,11 +10,11 @@ body {
 /* 클래스명 설정 */
 @layer components {
   .header-nav {
-    @apply flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto;
+    @apply flex lg:w-2/5 flex-wrap sm:space-x-8 space-x-3 items-center text-base md:ml-auto;
   }
 
   .header-nav div {
-    @apply cursor-pointer mr-5 text-base hover:text-blue-700;
+    @apply cursor-pointer text-base hover:text-blue-700;
   }
   .self-introduce-title {
     @apply font-bold pb-1 text-black;

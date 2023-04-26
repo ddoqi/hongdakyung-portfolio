@@ -30,7 +30,7 @@ const MainIntroduce = () => {
             </h3>
             {/* contact */}
             <div
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="1500"
               className="flex flex-col mb-10 lg:items-start items-center "
             >
@@ -52,11 +52,8 @@ const MainIntroduce = () => {
               </div>
               <div className="main-introduce-container">
                 <h2 className="main-introduce-title">CONTACT</h2>
-                {/* <p className="leading-relaxed text-base">
-                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                  taxidermy. Gastropub indxgo juice poutine.
-                </p> */}
-                <div>
+
+                <div className="lg:block flex items-center justify-center">
                   <ol>
                     <li>PH : 010-3457-6610</li>
                     <li>Email : bongbk72@naver.com</li>
@@ -87,7 +84,7 @@ const MainIntroduce = () => {
             </div>
             {/* experience */}
             <div
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="1500"
               className="flex flex-col mb-10 lg:items-start items-center"
             >

@@ -2,10 +2,10 @@ import React from "react";
 
 const SelfIntroduce = () => {
   return (
-    <div className="h-full justify-center items-center ">
+    <div className="h-full justify-center items-center">
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+          <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center lg:mt-0 mt-[15%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -36,9 +36,12 @@ const SelfIntroduce = () => {
                 className="p-2 mt-10"
               >
                 <div className="flex content-evenly justify-evenly h-full bg-gray-200  bg-opacity-95 px-8 p-10 rounded-lg overflow-hidden text-center">
-                  <h1 className="title-font sm:text-2xl text-2xl font-medium text-black ">
-                    한번 ‘더’
-                  </h1>
+                  <div className="title-font sm:text-2xl text-xl w-[20%] font-medium text-black ">
+                    한번
+                    <span className="text-[#3C82F6] md:text-3xl lg:ml-1">
+                      ‘더’
+                    </span>
+                  </div>
                   <div className="text-md flex flex-col text-left ml-5 w-[80%]">
                     <p className="self-introduce-title">
                       ✔️ 사용자 관점에서 생각합니다.

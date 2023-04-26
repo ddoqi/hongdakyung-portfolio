@@ -2,7 +2,7 @@ import React from "react";
 
 const MainSkills = () => {
   return (
-    <div>
+    <div className="w-full">
       <div>
         <section className="text-gray-600 body-font">
           <div className="flex flex-col text-center w-full mb-[5%]">
@@ -13,7 +13,7 @@ const MainSkills = () => {
               MAIN SKILLS
             </h1>
           </div>
-          <div className="container px-5  mx-auto flex lg:flex-row flex-col">
+          <div className="w-full px-5 flex lg:flex-row flex-col">
             {/* 메인스킬 */}
 
             <div>
@@ -37,7 +37,7 @@ const MainSkills = () => {
                     </svg>
                   </div>
                   <div
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1000"
                     className="flex-grow sm:pl-6 mt-6 sm:mt-0"
                   >
@@ -74,7 +74,7 @@ const MainSkills = () => {
                     </svg>
                   </div>
                   <div
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1000"
                     className="flex-grow sm:pl-6 mt-6 sm:mt-0"
                   >
@@ -122,7 +122,7 @@ const MainSkills = () => {
                     </svg>
                   </div>
                   <div
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1000"
                     className="flex-grow sm:pl-6 mt-6 sm:mt-0"
                   >
@@ -159,9 +159,9 @@ const MainSkills = () => {
                     </svg>
                   </div>
                   <div
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1000"
-                    className="flex-grow sm:pl-6 mt-6 sm:mt-0"
+                    className="flex-grow lg:pl-6mt-6 sm:mt-0"
                   >
                     <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
                       React-query , Redux , Recoil

@@ -13,6 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 import TopButton from "@/components/Button/TopButton";
+import { ProjectDataType } from "@/types/types";
 
 export default function Home({ projects }: any) {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Home({ projects }: any) {
       delay: 200, // values from 0 to 3000, with step 50ms
       duration: 700, // values from 0 to 3000, with step 50ms
       mirror: true,
+      once: false,
     });
   }, []);
 
@@ -66,7 +68,9 @@ export default function Home({ projects }: any) {
           </h1>
         </div>
         <div className="flex lg:flex-row flex-col items-center justify-center ">
-          {projects.results.map((project: any) => (
+          {/* projects NotionProjectDataType이고 project는 ProjectDataType  */}
+          {/* 전달해주는건 project */}
+          {projects.results.map((project: ProjectDataType) => (
             <div key={project.id}>
               <Projects key={project.id} data={project} />
             </div>
@@ -102,6 +106,7 @@ export async function getStaticProps() {
   );
 
   const projects = await res.json();
+  console.log("project:", projects);
 
   return {
     props: { projects },

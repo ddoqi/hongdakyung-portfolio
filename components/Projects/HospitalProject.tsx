@@ -62,7 +62,7 @@ const HospitalProject = () => {
           width={500}
           height={300}
           alt="hospital-photo"
-          className="object-fill bg-white ml-5"
+          className="object-fill bg-white lg:ml-5"
         />
       </div>
 
