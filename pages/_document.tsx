@@ -14,7 +14,7 @@ export default function Document() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hongdakyung.vercel.app/" />
         <meta property="og:title" content="홍다경 포트폴리오" />
-        <meta property="og:image" content="../public/images/mainPhoto.jpeg" />
+        <meta property="og:image" content="/images/mainPhoto.jpeg" />
         <meta
           property="og:description"
           content="한번 더 보고싶은 개발자 홍다경입니다."
