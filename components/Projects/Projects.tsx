@@ -24,15 +24,17 @@ const Projects = ({ data }: ProjectsProps) => {
   const imgSrc = data.cover.file?.url;
   const projectID = data.properties.projectId.rich_text[0].plain_text;
 
-  const connectURL = (projectID: string | number) => {
+  const connectURL = (projectID: string) => {
+    console.log(projectID);
+
     switch (projectID) {
-      case 1:
+      case "1":
         window.open("https://easygpt.ai/");
         break;
-      case 2:
+      case "2":
         window.open("https://github.com/Jeremy-Kr/there-are");
         break;
-      case 3:
+      case "3":
         window.open("https://github.com/ddoqi/saesuda-front");
         break;
       default:
