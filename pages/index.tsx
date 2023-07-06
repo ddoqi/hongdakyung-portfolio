@@ -1,19 +1,19 @@
-import Head from "next/head";
-import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
-import MainIntroduce from "@/components/Introduce/MainIntroduce";
-import SelfIntroduce from "@/components/Introduce/SelfIntroduce";
-import CoreExperience from "@/components/Experience/CoreExperience";
-import MainSkills from "@/components/Skills/MainSkills";
-import EtcSkills from "@/components/Skills/EtcSkills";
-import Projects from "@/components/Projects/Projects";
-import TackuTable from "@/components/Projects/TackuTable";
-import HospitalProject from "@/components/Projects/HospitalProject";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
-import TopButton from "@/components/Button/TopButton";
-import { ProjectDataType } from "@/types/types";
+import Head from 'next/head';
+import Header from '@/components/Layout/Header';
+import Footer from '@/components/Layout/Footer';
+import MainIntroduce from '@/components/Introduce/MainIntroduce';
+import SelfIntroduce from '@/components/Introduce/SelfIntroduce';
+import CoreExperience from '@/components/Experience/CoreExperience';
+import MainSkills from '@/components/Skills/MainSkills';
+import EtcSkills from '@/components/Skills/EtcSkills';
+import Projects from '@/components/Projects/Projects';
+import TackuTable from '@/components/Projects/TackuTable';
+import HospitalProject from '@/components/Projects/HospitalProject';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect, useRef } from 'react';
+import TopButton from '@/components/Button/TopButton';
+import { ProjectDataType } from '@/types/types';
 
 export default function Home({ projects }: any) {
   useEffect(() => {
@@ -58,24 +58,7 @@ export default function Home({ projects }: any) {
           <TackuTable />
           <HospitalProject />
         </div>
-        {/* 기타 프로젝트 */}
-        <div className="flex flex-col text-center w-full mb-10 mt-[5%]">
-          <h2 className="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
-            ETC
-          </h2>
-          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-            기타 프로젝트
-          </h1>
-        </div>
-        <div className="flex lg:flex-row flex-col items-center justify-center ">
-          {/* projects NotionProjectDataType이고 project는 ProjectDataType  */}
-          {/* 전달해주는건 project */}
-          {projects.results.map((project: ProjectDataType) => (
-            <div key={project.id}>
-              <Projects key={project.id} data={project} />
-            </div>
-          ))}
-        </div>
+
         <TopButton />
         <Footer />
       </div>
@@ -86,16 +69,16 @@ export default function Home({ projects }: any) {
 // notion API 데이터 불러오기
 export async function getStaticProps() {
   const options = {
-    method: "POST",
+    method: 'POST',
     headers: {
-      accept: "application/json",
-      "Notion-Version": "2022-06-28",
-      "content-type": "application/json",
+      accept: 'application/json',
+      'Notion-Version': '2022-06-28',
+      'content-type': 'application/json',
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`,
     },
 
     body: JSON.stringify({
-      sorts: [{ property: "projectName", direction: "ascending" }],
+      sorts: [{ property: 'projectName', direction: 'ascending' }],
       page_size: 100,
     }),
   };
@@ -106,7 +89,7 @@ export async function getStaticProps() {
   );
 
   const projects = await res.json();
-  console.log("project:", projects);
+  console.log('project:', projects);
 
   return {
     props: { projects },
